@@ -1,8 +1,9 @@
 # allesfitter on modern Python: what was changed and what was tested
 
 Date: 2026-10-21
-Repo: `/home/sprice/allesfitter` (fork/clone of github.com/MNGuenther/allesfitter, upstream last commit 2023-04-14, v1.2.10)
-Branch: `modernise-py312`
+Repo: https://github.com/moosesteve21/allesfitter, a fork of https://github.com/MNGuenther/allesfitter (upstream last commit 2023-04-14, v1.2.10)
+Branch: `modernise-py312`, the fork's **default branch**. The fork's `master` is left as an unmodified mirror of upstream.
+Local clone: `/home/sprice/allesfitter` (`origin` = fork, `upstream` = MNGuenther/allesfitter)
 
 ## Summary
 
@@ -96,7 +97,14 @@ Before relying on any of these, run the matching tutorial in `tutorials/` and co
 
 ## Notes for use in another project
 
-- **Python version:** use Python ≤ 3.12 unless celerite/george can be compiled. Point at this venv, or in another 3.12 venv run `uv pip install -r requirements.txt`, then `uv pip install -e /home/sprice/allesfitter`, then build ellc as above.
+- **Python version:** use Python ≤ 3.12 unless celerite/george can be compiled.
+- **Installing:** in a Python 3.12 venv, install from the fork. Its default branch has the fixes, so no branch name is needed:
+  ```bash
+  uv pip install "git+https://github.com/moosesteve21/allesfitter.git"
+  uv pip install -r https://raw.githubusercontent.com/moosesteve21/allesfitter/modernise-py312/requirements.txt
+  ```
+  Then build ellc as above. `setup.py` declares no dependencies, so the requirements file has to be installed explicitly. To pin an exact version, append `@<commit>` to the git URL. For local development, use `uv pip install -e /home/sprice/allesfitter` instead, or point at the existing venv `/home/sprice/allesfitter/.venv`.
+- **Pulling upstream changes** (unlikely; upstream is inactive): `git fetch upstream`, then merge `upstream/master` into `modernise-py312`.
 - **CPU usage:** in `settings.csv`, `multiprocess_cores,all` means `cpu_count()-1` (15 on this 16-thread machine), and every tutorial ships with `multiprocess,True` + `all`. On a shared machine, set an explicit integer. Also set `OMP_NUM_THREADS=1` (and `OPENBLAS_NUM_THREADS=1`) so BLAS does not add threads inside each worker.
 - **Headless runs:** set `MPLBACKEND=Agg`.
 - **Global plotting side effect:** importing allesfitter calls `seaborn.set(...)`, which changes matplotlib defaults for the whole process.
