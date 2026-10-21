@@ -61,7 +61,14 @@ def alles_anderson(residuals):
     logprint('Anderson-Darling Test')
     logprint('---------------------')
     logprint('This tests the null hypothesis that the residuals follows a normal distribution.') 
-    statistic, critical_values, significance_levels = anderson(residuals)
+    try:
+        statistic = anderson(residuals, method='interpolate').statistic #scipy>=1.17
+    except TypeError:
+        statistic = anderson(residuals).statistic
+    #::: critical values for dist='norm', as scipy computes them (scipy>=1.19 no longer returns them)
+    N = len(residuals)
+    significance_levels = np.array([15, 10, 5, 2.5, 1])
+    critical_values = np.around(np.array([0.561, 0.631, 0.752, 0.873, 1.035]) / (1.0 + 0.75/N + 2.25/N/N), 3)
     logprint('Test statistic\t\t', statistic)
     logprint('Critical values\t\t', critical_values)
     logprint('Significance levels\t', significance_levels/100.)
@@ -111,7 +118,10 @@ def alles_adfuller(residuals):
             logprint('Augmented Dickey-Fuller Test')
             logprint('----------------------------')
             logprint('This tests the null hypothesis that the residuals show non-stationarity (trends).') 
-            adfTest = adfuller(timeseries, autolag='AIC')
+            try:
+                adfTest = adfuller(timeseries, autolag='AIC', result_object=False) #statsmodels>=0.15
+            except TypeError:
+                adfTest = adfuller(timeseries, autolag='AIC')
             self.pValue = adfTest[1]
             if (self.pValue<self.SignificanceLevel):
                 self.isStationary = True

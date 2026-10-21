@@ -5,7 +5,7 @@
 # must be built manually with gfortran -- see ALLESFITTER_MODERNISATION.md.
 
 numpy>=1.25          # code uses np.exceptions (numpy >= 1.25); tested on 2.5.4
-scipy>=1.10,<1.19    # scipy 1.19 removes anderson() result attributes used in statistics output
+scipy>=1.10
 matplotlib>=3.8
 seaborn>=0.13
 astropy>=5.0
@@ -15,7 +15,7 @@ corner
 emcee>=3.0,<4
 h5py                 # emcee HDF5 backend
 dynesty>=2.0
-statsmodels>=0.14,<0.16  # statsmodels 0.16 changes adfuller() return type
+statsmodels>=0.14
 
 # optional: GP baselines / stellar variability
 celerite>=0.4.3

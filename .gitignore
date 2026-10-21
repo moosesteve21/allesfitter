@@ -5,3 +5,4 @@ __pychache__
 *.egg-info
 dist/
 build/
+scratch/
