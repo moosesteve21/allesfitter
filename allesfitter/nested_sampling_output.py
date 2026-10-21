@@ -263,9 +263,10 @@ def ns_output(datadir):
     for inst in config.BASEMENT.settings['inst_all']:
         if inst in config.BASEMENT.settings['inst_phot']: key='flux'
         elif inst in config.BASEMENT.settings['inst_rv']: key='rv'
+        elif inst in config.BASEMENT.settings['inst_rv2']: key='rv2'
         model = calculate_model(params_median, inst, key)
         baseline = calculate_baseline(params_median, inst, key)
-        stellar_var = calculate_stellar_var(params_median, inst, key)
+        stellar_var = calculate_stellar_var(params_median, 'all', key, xx=config.BASEMENT.data[inst]['time']) #conditioned on all instruments, evaluated at this instrument's times
         residuals = config.BASEMENT.data[inst][key] - model - baseline - stellar_var
         residual_stats(residuals)
     
