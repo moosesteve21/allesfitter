@@ -1,4 +1,4 @@
-# Exact versions tested with Python 3.12.15 on 2026-10-21. ellc 1.8.15 (git a0afdce) built manually; see ALLESFITTER_MODERNISATION.md.
+# Exact versions tested with Python 3.12.15 on 2026-10-21. ellc 1.8.15 (git a0afdce) built manually; build steps in requirements.txt.
 astropy==8.0.2
 astropy-iers-data==0.2026.10.19.0.52.1
 brokenaxes==0.6.2

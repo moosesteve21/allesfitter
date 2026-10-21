@@ -1,8 +1,11 @@
 # Dependencies for allesfitter on Python 3.12 (tested with 3.12.15).
 # Exact tested versions are in requirements-lock.txt.
 #
-# ellc is NOT installable from PyPI (its 1.8.15 sdist lacks the makefile) and
-# must be built manually with gfortran -- see ALLESFITTER_MODERNISATION.md.
+# ellc (required) is NOT installable from PyPI: its 1.8.15 sdist lacks the
+# makefile. Build it with gfortran (tested at commit a0afdce):
+#   git clone https://github.com/pmaxted/ellc.git && cd ellc
+#   gfortran -O2 -fPIC -shared f_src/{constants,utils,coords,gauss_legendre,solve_real_poly,ellipse,stellar,spots,ellc}.f90 -o libellc.so
+#   cp libellc.so ellc/ && pip install .
 
 numpy>=1.25          # code uses np.exceptions (numpy >= 1.25); tested on 2.5.4
 scipy>=1.10
