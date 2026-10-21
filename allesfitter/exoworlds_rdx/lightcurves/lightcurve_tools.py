@@ -302,12 +302,12 @@ def plot_binned_lightcurve(ax, time, f, ferr=np.nan, bin_time=0, show_transit_re
     ax.set_title( title )
     ax.set_ylabel( 'Flux' )
     ax.set_xlabel( 'HJD' )
-    ax.set_xlim([ np.int(np.min(time))-1, np.int(np.max(time))+1 ])
+    ax.set_xlim([ int(np.min(time))-1, int(np.max(time))+1 ])
     stop = timeit.default_timer()
     if debug: print('Scatter succesfully created in', stop-start, 's.')
 
     start = timeit.default_timer() 
-    for i in np.arange( np.int(time[0]), np.int(time[-1])+1 ): 
+    for i in np.arange( int(time[0]), int(time[-1])+1 ): 
         ax.axvline(i, color='lightgrey', zorder=-2)
     stop = timeit.default_timer()
     if debug: print('Lines succesfully created in', stop-start, 's.')

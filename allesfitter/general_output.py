@@ -30,8 +30,8 @@ import warnings
 from astropy.time import Time
 #import pickle
 from tqdm import tqdm
-warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning) 
-warnings.filterwarnings('ignore', category=np.RankWarning) 
+warnings.filterwarnings('ignore', category=np.exceptions.VisibleDeprecationWarning) 
+warnings.filterwarnings('ignore', category=np.exceptions.RankWarning) 
 
 #::: allesfitter modules
 from . import config

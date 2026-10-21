@@ -154,7 +154,7 @@ def prepare_ttv_fit(datadir, style='fullplot', max_transits=20):
             ax.set(xlabel='Time', ylabel='Flux', xlim=[tmid1-window/2., tmid1+window/2.])
             ax.text(0.95,0.95,'Transit '+str(i+1), va='top', ha='right', transform=ax.transAxes)
             with open(os.path.join(datadir,'ttv_preparation','ttv_initial_guess_params.csv'),'a') as f:
-               f.write(companion+'_ttv_transit_'+str(i+1)+','+np.format_float_positional(ttv_guess,4)+',1,uniform '+np.format_float_positional(ttv_guess-0.01,4)+' '+np.format_float_positional(ttv_guess+0.01,4)+',TTV$_\mathrm{'+companion+';'+str(i+1)+'}$,d\n')
+               f.write(companion+'_ttv_transit_'+str(i+1)+','+np.format_float_positional(ttv_guess,4)+',1,uniform '+np.format_float_positional(ttv_guess-0.01,4)+' '+np.format_float_positional(ttv_guess+0.01,4)+',TTV$_\\mathrm{'+companion+';'+str(i+1)+'}$,d\n')
             if i == end_transit_index - 1:
                 ax_for_legend = axes[0] if isinstance(axes, (list, np.ndarray)) else axes
                 ax_for_legend.legend()

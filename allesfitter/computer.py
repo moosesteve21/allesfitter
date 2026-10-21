@@ -30,8 +30,8 @@ from scipy.optimize import minimize
 from scipy.interpolate import UnivariateSpline
 import numpy.polynomial.polynomial as poly
 import warnings
-warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning) 
-warnings.filterwarnings('ignore', category=np.RankWarning) 
+warnings.filterwarnings('ignore', category=np.exceptions.VisibleDeprecationWarning) 
+warnings.filterwarnings('ignore', category=np.exceptions.RankWarning) 
 warnings.filterwarnings('ignore', category=RuntimeWarning) 
 
 #::: for now, only use the original celerite

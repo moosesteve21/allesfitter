@@ -29,8 +29,8 @@ from time import time as timer
 
 #::: warnings
 import warnings
-warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning) 
-warnings.filterwarnings('ignore', category=np.RankWarning) 
+warnings.filterwarnings('ignore', category=np.exceptions.VisibleDeprecationWarning) 
+warnings.filterwarnings('ignore', category=np.exceptions.RankWarning) 
 
 #::: allesfitter modules
 from . import config

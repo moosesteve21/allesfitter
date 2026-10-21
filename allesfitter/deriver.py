@@ -485,93 +485,93 @@ def derive(samples, mode):
     for companion in companions:
             
         names.append( companion+'_R_star/a' )
-        labels.append( 'Host radius over semi-major axis '+companion+'; $R_\star/a_\mathrm{'+companion+'}$' )
+        labels.append( 'Host radius over semi-major axis '+companion+'; $R_\\star/a_\\mathrm{'+companion+'}$' )
         
         names.append( companion+'_a/R_star' )
-        labels.append( 'Semi-major axis '+companion+' over host radius; $a_\mathrm{'+companion+'}/R_\star$' )
+        labels.append( 'Semi-major axis '+companion+' over host radius; $a_\\mathrm{'+companion+'}/R_\\star$' )
         
         names.append( companion+'_R_companion/a'  )
-        labels.append( 'Companion radius '+companion+' over semi-major axis '+companion+'; $R_\mathrm{'+companion+'}/a_\mathrm{'+companion+'}$' )
+        labels.append( 'Companion radius '+companion+' over semi-major axis '+companion+'; $R_\\mathrm{'+companion+'}/a_\\mathrm{'+companion+'}$' )
         
         names.append( companion+'_R_companion_(R_earth)' )
-        labels.append( 'Companion radius '+companion+'; $R_\mathrm{'+companion+'}$ ($\mathrm{R_{\oplus}}$)' )
+        labels.append( 'Companion radius '+companion+'; $R_\\mathrm{'+companion+'}$ ($\\mathrm{R_{\\oplus}}$)' )
         
         names.append( companion+'_R_companion_(R_jup)' )
-        labels.append( 'Companion radius '+companion+'; $R_\mathrm{'+companion+'}$ ($\mathrm{R_{jup}}$)' )
+        labels.append( 'Companion radius '+companion+'; $R_\\mathrm{'+companion+'}$ ($\\mathrm{R_{jup}}$)' )
         
         names.append( companion+'_a_(R_sun)' )
-        labels.append( 'Semi-major axis '+companion+'; $a_\mathrm{'+companion+'}$ ($\mathrm{R_{\odot}}$)' )
+        labels.append( 'Semi-major axis '+companion+'; $a_\\mathrm{'+companion+'}$ ($\\mathrm{R_{\\odot}}$)' )
         
         names.append( companion+'_a_(AU)' )
-        labels.append( 'Semi-major axis '+companion+'; $a_\mathrm{'+companion+'}$ (AU)' )
+        labels.append( 'Semi-major axis '+companion+'; $a_\\mathrm{'+companion+'}$ (AU)' )
         
         names.append( companion+'_i' )
-        labels.append( 'Inclination '+companion+'; $i_\mathrm{'+companion+'}$ (deg)' )
+        labels.append( 'Inclination '+companion+'; $i_\\mathrm{'+companion+'}$ (deg)' )
         
         names.append( companion+'_e' )
-        labels.append( 'Eccentricity '+companion+'; $e_\mathrm{'+companion+'}$' )
+        labels.append( 'Eccentricity '+companion+'; $e_\\mathrm{'+companion+'}$' )
         
         names.append( companion+'_w' )
-        labels.append( 'Argument of periastron '+companion+'; $w_\mathrm{'+companion+'}$ (deg)' )
+        labels.append( 'Argument of periastron '+companion+'; $w_\\mathrm{'+companion+'}$ (deg)' )
         
         names.append( companion+'_q' )
-        labels.append( 'Mass ratio '+companion+'; $q_\mathrm{'+companion+'}$' )
+        labels.append( 'Mass ratio '+companion+'; $q_\\mathrm{'+companion+'}$' )
         
         names.append( companion+'_M_companion_(M_earth)' )
-        labels.append( 'Companion mass '+companion+'; $M_\mathrm{'+companion+'}$ ($\mathrm{M_{\oplus}}$)' )
+        labels.append( 'Companion mass '+companion+'; $M_\\mathrm{'+companion+'}$ ($\\mathrm{M_{\\oplus}}$)' )
         
         names.append( companion+'_M_companion_(M_jup)' )
-        labels.append( 'Companion mass '+companion+'; $M_\mathrm{'+companion+'}$ ($\mathrm{M_{jup}}$)' )
+        labels.append( 'Companion mass '+companion+'; $M_\\mathrm{'+companion+'}$ ($\\mathrm{M_{jup}}$)' )
         
         names.append( companion+'_M_companion_(M_sun)' )
-        labels.append( 'Companion mass '+companion+'; $M_\mathrm{'+companion+'}$ ($\mathrm{M_{\odot}}$)' )
+        labels.append( 'Companion mass '+companion+'; $M_\\mathrm{'+companion+'}$ ($\\mathrm{M_{\\odot}}$)' )
         
         names.append( companion+'_b_tra' )
-        labels.append( 'Impact parameter '+companion+'; $b_\mathrm{tra;'+companion+'}$' )
+        labels.append( 'Impact parameter '+companion+'; $b_\\mathrm{tra;'+companion+'}$' )
         
         names.append( companion+'_T_tra_tot'  )
-        labels.append( 'Total transit duration '+companion+'; $T_\mathrm{tot;'+companion+'}$ (h)' )
+        labels.append( 'Total transit duration '+companion+'; $T_\\mathrm{tot;'+companion+'}$ (h)' )
         
         names.append( companion+'_T_tra_full' )
-        labels.append( 'Full-transit duration '+companion+'; $T_\mathrm{full;'+companion+'}$ (h)' )
+        labels.append( 'Full-transit duration '+companion+'; $T_\\mathrm{full;'+companion+'}$ (h)' )
         
         names.append( companion+'_epoch_occ'  )
-        labels.append( 'Epoch occultation '+companion+'; $T_\mathrm{0;occ;'+companion+'}$' )
+        labels.append( 'Epoch occultation '+companion+'; $T_\\mathrm{0;occ;'+companion+'}$' )
         
         names.append( companion+'_b_occ'  )
-        labels.append( 'Impact parameter occultation '+companion+'; $b_\mathrm{occ;'+companion+'}$' )
+        labels.append( 'Impact parameter occultation '+companion+'; $b_\\mathrm{occ;'+companion+'}$' )
         
         names.append( companion+'_host_density' )
-        labels.append( 'Host density from orbit '+companion+'; $\\rho_\mathrm{\star;'+companion+'}$ (cgs)' )
+        labels.append( 'Host density from orbit '+companion+'; $\\rho_\\mathrm{\\star;'+companion+'}$ (cgs)' )
     
         names.append( companion+'_density' )
-        labels.append( 'Companion density '+companion+'; $\\rho_\mathrm{'+companion+'}$ (cgs)' )
+        labels.append( 'Companion density '+companion+'; $\\rho_\\mathrm{'+companion+'}$ (cgs)' )
         
         names.append( companion+'_surface_gravity')
-        labels.append( 'Companion surface gravity '+companion+'; $g_\mathrm{'+companion+'}$ (cgs)' )
+        labels.append( 'Companion surface gravity '+companion+'; $g_\\mathrm{'+companion+'}$ (cgs)' )
         
         names.append( companion+'_Teq' )
-        labels.append( 'Equilibrium temperature '+companion+'; $T_\mathrm{eq;'+companion+'}$ (K)' )
+        labels.append( 'Equilibrium temperature '+companion+'; $T_\\mathrm{eq;'+companion+'}$ (K)' )
         
         for inst in config.BASEMENT.settings['inst_phot']:
             
             names.append( companion+'_depth_tr_undil_'+inst )
-            labels.append( 'Transit depth (undil.) '+companion+'; $\delta_\mathrm{tr; undil; '+companion+'; '+inst+'}$ (ppt)' )
+            labels.append( 'Transit depth (undil.) '+companion+'; $\\delta_\\mathrm{tr; undil; '+companion+'; '+inst+'}$ (ppt)' )
             
             names.append( companion+'_depth_tr_dil_'+inst )
-            labels.append( 'Transit depth (dil.) '+companion+'; $\delta_\mathrm{tr; dil; '+companion+'; '+inst+'}$ (ppt)' )
+            labels.append( 'Transit depth (dil.) '+companion+'; $\\delta_\\mathrm{tr; dil; '+companion+'; '+inst+'}$ (ppt)' )
         
             names.append( companion+'_depth_occ_undil_'+inst )
-            labels.append( 'Occultation depth (undil.) '+companion+'; $\delta_\mathrm{occ; undil; '+companion+'; '+inst+'}$ (ppt)' )
+            labels.append( 'Occultation depth (undil.) '+companion+'; $\\delta_\\mathrm{occ; undil; '+companion+'; '+inst+'}$ (ppt)' )
             
             names.append( companion+'_depth_occ_dil_'+inst )
-            labels.append( 'Occultation depth (dil.) '+companion+'; $\delta_\mathrm{occ; dil; '+companion+'; '+inst+'}$ (ppt)' )
+            labels.append( 'Occultation depth (dil.) '+companion+'; $\\delta_\\mathrm{occ; dil; '+companion+'; '+inst+'}$ (ppt)' )
             
             names.append( companion+'_nightside_flux_undil_'+inst )
-            labels.append( 'Nightside flux (undil.)'+companion+'; $F_\mathrm{nightside; undil; '+companion+'; '+inst+'}$ (ppt)' )
+            labels.append( 'Nightside flux (undil.)'+companion+'; $F_\\mathrm{nightside; undil; '+companion+'; '+inst+'}$ (ppt)' )
             
             names.append( companion+'_nightside_flux_dil_'+inst )
-            labels.append( 'Nightside flux (dil.)'+companion+'; $F_\mathrm{nightside; dil; '+companion+'; '+inst+'}$ (ppt)' )
+            labels.append( 'Nightside flux (dil.)'+companion+'; $F_\\mathrm{nightside; dil; '+companion+'; '+inst+'}$ (ppt)' )
             
             
             
@@ -580,7 +580,7 @@ def derive(samples, mode):
             for other_companion in companions:
                 if other_companion is not companion:
                     names.append( companion+'_period/'+other_companion+'_period' )
-                    labels.append( 'Period ratio; $P_\mathrm{'+companion+'} / P_\mathrm{'+other_companion+'}$' )
+                    labels.append( 'Period ratio; $P_\\mathrm{'+companion+'} / P_\\mathrm{'+other_companion+'}$' )
            
             
     #::: host
@@ -590,28 +590,28 @@ def derive(samples, mode):
             
         elif config.BASEMENT.settings['host_ld_law_'+inst] == 'lin':
             names.append( 'host_ldc_u1_'+inst )
-            labels.append( 'Limb darkening; $u_\mathrm{1; '+inst+'}$' )
+            labels.append( 'Limb darkening; $u_\\mathrm{1; '+inst+'}$' )
             
         elif config.BASEMENT.settings['host_ld_law_'+inst] == 'quad':
             names.append( 'host_ldc_u1_'+inst )
-            labels.append( 'Limb darkening; $u_\mathrm{1; '+inst+'}$' )
+            labels.append( 'Limb darkening; $u_\\mathrm{1; '+inst+'}$' )
             names.append( 'host_ldc_u2_'+inst )
-            labels.append( 'Limb darkening; $u_\mathrm{2; '+inst+'}$' )
+            labels.append( 'Limb darkening; $u_\\mathrm{2; '+inst+'}$' )
             
         elif config.BASEMENT.settings['host_ld_law_'+inst] == 'sing':
             names.append( 'host_ldc_u1_'+inst )
-            labels.append( 'Limb darkening; $u_\mathrm{1; '+inst+'}$' )
+            labels.append( 'Limb darkening; $u_\\mathrm{1; '+inst+'}$' )
             names.append( 'host_ldc_u2_'+inst )
-            labels.append( 'Limb darkening; $u_\mathrm{2; '+inst+'}$' )
+            labels.append( 'Limb darkening; $u_\\mathrm{2; '+inst+'}$' )
             names.append( 'host_ldc_u3_'+inst )
-            labels.append( 'Limb darkening; $u_\mathrm{3; '+inst+'}$' )
+            labels.append( 'Limb darkening; $u_\\mathrm{3; '+inst+'}$' )
             
         else:
             raise ValueError("Currently only 'none', 'lin', 'quad' and 'sing' limb darkening are supported.")
                 
         
     names.append( 'combined_host_density' )
-    labels.append( 'Combined host density from all orbits; $rho_\mathrm{\star; combined}$ (cgs)' )
+    labels.append( 'Combined host density from all orbits; $rho_\\mathrm{\\star; combined}$ (cgs)' )
         
             
     ###############################################################################
@@ -709,8 +709,8 @@ def derive(samples, mode):
                             fmt = ScalarFormatter(useOffset=False)
                             caxes[i,j].yaxis.set_major_formatter(fmt)
                             
-                        for tick in caxes[i,j].xaxis.get_major_ticks(): tick.label.set_fontsize(24) 
-                        for tick in caxes[i,j].yaxis.get_major_ticks(): tick.label.set_fontsize(24)    
+                        for tick in caxes[i,j].xaxis.get_major_ticks(): tick.label1.set_fontsize(24) 
+                        for tick in caxes[i,j].yaxis.get_major_ticks(): tick.label1.set_fontsize(24)    
             else:
                 caxes.set_title(ctitle)
                 caxes.xaxis.set_label_coords(0.5, -0.5)

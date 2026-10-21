@@ -19,7 +19,7 @@ from __future__ import print_function, division, absolute_import
 #::: modules
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.cm import get_cmap
+from matplotlib.pyplot import get_cmap
 import os, sys
 from datetime import datetime
 #import warnings

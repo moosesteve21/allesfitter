@@ -90,7 +90,7 @@ def estimate_noise_wrap(pathdata):
         median = priors['ln_yerr_median'][i]
         err = 5.*np.max([ float(priors['ln_yerr_ll'][i]), float(priors['ln_yerr_ul'][i]) ])
         median, err, _ = round_txt_separately(median,err,err)
-        fwrite('ln_err_flux_'+inst+','+median+',1,trunc_normal -23 0 '+median+' '+err+',$\log{\sigma_\mathrm{'+inst+'}}$,')
+        fwrite('ln_err_flux_'+inst+','+median+',1,trunc_normal -23 0 '+median+' '+err+',$\\log{\\sigma_\\mathrm{'+inst+'}}$,')
     
     for i, inst in enumerate(config.BASEMENT.settings['inst_rv']):   
         #::: read in the summary file
@@ -103,7 +103,7 @@ def estimate_noise_wrap(pathdata):
         median = priors['ln_yerr_median'][i]
         err = 5.*np.max([ float(priors['ln_yerr_ll'][i]), float(priors['ln_yerr_ul'][i]) ])
         median, err, _ = round_txt_separately(median,err,err)
-        fwrite('ln_jitter_rv_'+inst+','+median+',1,trunc_normal -23 0 '+median+' '+err+',$\log{\sigma_\mathrm{jitter; '+inst+'}}$,')
+        fwrite('ln_jitter_rv_'+inst+','+median+',1,trunc_normal -23 0 '+median+' '+err+',$\\log{\\sigma_\\mathrm{jitter; '+inst+'}}$,')
     
     
     #::: write new rows into params.csv
@@ -121,12 +121,12 @@ def estimate_noise_wrap(pathdata):
         median = priors['gp_ln_sigma_median'][i]
         err = 5.*np.max([ float(priors['gp_ln_sigma_ll'][i]), float(priors['gp_ln_sigma_ul'][i]) ])
         median, err, _ = round_txt_separately(median,err,err)
-        fwrite('baseline_gp1_flux_'+inst+','+median+',1,trunc_normal -23 23 '+median+' '+err+',$\mathrm{gp: \log{\sigma} ('+inst+')}$,')
+        fwrite('baseline_gp1_flux_'+inst+','+median+',1,trunc_normal -23 23 '+median+' '+err+',$\\mathrm{gp: \\log{\\sigma} ('+inst+')}$,')
     
         median = priors['gp_ln_rho_median'][i]
         err = 5.*np.max([ float(priors['gp_ln_rho_ll'][i]), float(priors['gp_ln_rho_ul'][i]) ])
         median, err, _ = round_txt_separately(median,err,err)
-        fwrite('baseline_gp2_flux_'+inst+','+median+',1,trunc_normal -23 23 '+median+' '+err+',$\mathrm{gp: \log{\\rho} ('+inst+')}$,')
+        fwrite('baseline_gp2_flux_'+inst+','+median+',1,trunc_normal -23 23 '+median+' '+err+',$\\mathrm{gp: \\log{\\rho} ('+inst+')}$,')
 
 
 
